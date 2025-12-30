@@ -15,7 +15,7 @@ React (Vite)
 
 Tailwind CSS (optional)
 
-TMDB API
+OMDB API
 
 React Router
 
@@ -27,10 +27,19 @@ git clone https://github.com/kawtar-SE/movie-search-app.git
 cd movie-search-app
 
  //Project Structure//
+ 
 src/
+│── api/
+└── fetchMovies.js
 │── components/
 │   ├── Navbar.jsx
 │   ├── Navbar.css
+|    ├── Searchbar.jsx
+│   ├── MoviesList.jsx
+│   ├── MovieCard.jsx
+│   └── Sidebar.jsx
+    ├── Sidebar.css
+│   ├── Searchbar.css
 │── pages/
 │   ├── Home.jsx
 │   ├── TopRating.jsx
