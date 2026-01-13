@@ -1,0 +1,86 @@
+.searchbar-container {
+  display:flex;  
+  justify-content:center;
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 20px 0; 
+}
+
+.searchbar-input {
+  padding: 10px 40px 10px 10px;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.searchbar-input:focus {
+  border-color: #b07070ff;
+  box-shadow: 0 0 5px #c38080ff;
+}
+.movies-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.movie-card {
+  border: 1px solid #433535ff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  background-color: #ccc;
+  transition: transform 0.3s;
+}
+.movie-card:hover {
+  transform: translateY(-5px);
+  color:#433535ff;
+}
+.movie-card span:hover{
+  color:#433535ff;
+}
+
+.movie-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.movie-card h3 {
+  font-size: 17px;
+  margin: 10px 0 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.movie-card p:hover{
+  color: #5a4949ff;
+}
+.movie-date {
+  opacity: 0;
+  transition: 0.3s;
+}
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+
+@media (max-width: 500px){
+    .searchbar-input {
+    font-size: 14px;
+    max-width:100%;
+  }
+.movies-container {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 15px;
+  }
+}

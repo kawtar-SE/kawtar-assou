@@ -1,0 +1,67 @@
+/* Default sidebar (desktop) */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 100vh;
+  background: black;
+  color: white;
+  padding-top: 70px; 
+  transition: all 0.3s;
+  overflow: hidden;
+}
+
+.sidebar:not(.open) {
+  width: 0px; 
+}
+
+.side-item {
+  color: #ffffff;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 15px 20px;
+  display: block;
+  transition: 0.3s ease;
+}
+
+.side-item:hover,
+.side-item.active {
+  color: #534242;
+  font-weight: bold;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .sidebar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: -300px; 
+    width: 260px;
+    height: 100vh;
+    background: black;
+    flex-direction: column;
+    gap: 20px;
+    padding: 60px 20px;
+    transition: right 0.3s ease;
+    z-index: 100;
+  }
+
+  .sidebar.open {
+    right: 0;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    font-size: 24px;
+  }
+}
+
+/* Hide hamburger on desktop */
+@media (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
+}
